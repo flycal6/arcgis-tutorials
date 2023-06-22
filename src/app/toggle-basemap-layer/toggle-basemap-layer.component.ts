@@ -4,14 +4,14 @@ import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import Search from '@arcgis/core/widgets/Search';
-import SceneView from '@arcgis/core/views/SceneView';
+import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
 
 @Component({
-  selector: 'app-scene-view',
-  templateUrl: './scene-view.component.html',
-  styleUrls: ['./scene-view.component.scss']
+  selector: 'app-toggle-basemap-layer',
+  templateUrl: './toggle-basemap-layer.component.html',
+  styleUrls: ['./toggle-basemap-layer.component.scss']
 })
-export class SceneViewComponent implements OnInit, OnDestroy {
+export class ToggleBasemapLayerComponent implements OnInit, OnDestroy {
 
     @ViewChild('mapViewNode', {static: true}) viewDiv!: ElementRef;
     public view: any = null;
@@ -31,21 +31,22 @@ export class SceneViewComponent implements OnInit, OnDestroy {
 
         const map = new Map({
             basemap: 'arcgis-topographic',
-            // ground: 'world-elevation'
         });
 
-        const view = new SceneView({
+
+        const view = new MapView({
             container,
             map,
-            camera: {
-                position: {
-                    x: -118.808, // longitude
-                    y: 33.961, // latitude
-                    z: 2000 // meters
-                },
-                tilt: 75
-            }
-        })
+            center: [-118.80543,34.02700], // longitude, latitude
+            zoom: 13
+        });
+
+        const basemapToggle = new BasemapToggle({
+            view,
+            nextBasemap: 'arcgis-imagery'
+        });
+
+        view.ui.add(basemapToggle, 'bottom-right');
 
         const search = new Search({view});
 

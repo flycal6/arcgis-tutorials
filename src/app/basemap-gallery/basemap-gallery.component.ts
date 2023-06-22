@@ -3,15 +3,16 @@ import esriConfig from '@arcgis/core/config';
 import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
+import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
 import Search from '@arcgis/core/widgets/Search';
-import SceneView from '@arcgis/core/views/SceneView';
+import BasemapGallery from '@arcgis/core/widgets/BasemapGallery';
 
 @Component({
-  selector: 'app-scene-view',
-  templateUrl: './scene-view.component.html',
-  styleUrls: ['./scene-view.component.scss']
+  selector: 'app-basemap-gallery',
+  templateUrl: './basemap-gallery.component.html',
+  styleUrls: ['./basemap-gallery.component.scss']
 })
-export class SceneViewComponent implements OnInit, OnDestroy {
+export class BasemapGalleryComponent implements OnInit, OnDestroy {
 
     @ViewChild('mapViewNode', {static: true}) viewDiv!: ElementRef;
     public view: any = null;
@@ -31,25 +32,29 @@ export class SceneViewComponent implements OnInit, OnDestroy {
 
         const map = new Map({
             basemap: 'arcgis-topographic',
-            // ground: 'world-elevation'
         });
 
-        const view = new SceneView({
+
+        const view = new MapView({
             container,
             map,
-            camera: {
-                position: {
-                    x: -118.808, // longitude
-                    y: 33.961, // latitude
-                    z: 2000 // meters
-                },
-                tilt: 75
+            center: [-118.80543,34.02700], // longitude, latitude
+            zoom: 13
+        });
+
+        const basemapGallery = new BasemapGallery({
+            view,
+            source: {
+                query: {
+                    title: '"World Basemaps for Developers" AND owner:esri'
+                }
             }
         })
+        view.ui.add(basemapGallery, 'top-right');
 
         const search = new Search({view});
+        view.ui.add(search, 'bottom-left');
 
-        view.ui.add(search, 'top-right');
         this.view = view;
 
         return this.view.when();
@@ -59,6 +64,4 @@ export class SceneViewComponent implements OnInit, OnDestroy {
         if (this.view) {
             this.view.destroy();
         }
-    }
-
-}
+    }}

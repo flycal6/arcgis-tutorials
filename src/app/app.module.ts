@@ -8,7 +8,8 @@ import { WebMapComponent } from './web-map/web-map.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { SceneViewComponent } from './scene-view/scene-view.component';
-import { ChangeBasemapLayerComponent } from './change-basemap-layer/change-basemap-layer.component';
+import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basemap-layer.component';
+import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChangeBasemapLayerComponent } from './change-basemap-layer/change-basem
     WebMapComponent,
     PageNotFoundComponent,
     SceneViewComponent,
-    ChangeBasemapLayerComponent
+    ToggleBasemapLayerComponent,
+    BasemapGalleryComponent
   ],
   imports     : [
     BrowserModule,
