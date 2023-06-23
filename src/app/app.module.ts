@@ -12,6 +12,7 @@ import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basem
 import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
 import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
 import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-polys.component';
+import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-feature-layer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-pol
     ToggleBasemapLayerComponent,
     BasemapGalleryComponent,
     CustomBasemapStylesComponent,
-    PointsLinesPolysComponent
+    PointsLinesPolysComponent,
+    HostedFeatureLayerComponent
   ],
   imports     : [
     BrowserModule,
