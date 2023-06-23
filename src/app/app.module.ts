@@ -11,6 +11,7 @@ import { SceneViewComponent } from './scene-view/scene-view.component';
 import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basemap-layer.component';
 import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
 import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
+import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-polys.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-bas
     SceneViewComponent,
     ToggleBasemapLayerComponent,
     BasemapGalleryComponent,
-    CustomBasemapStylesComponent
+    CustomBasemapStylesComponent,
+    PointsLinesPolysComponent
   ],
   imports     : [
     BrowserModule,
