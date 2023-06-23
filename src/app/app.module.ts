@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { SceneViewComponent } from './scene-view/scene-view.component';
 import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basemap-layer.component';
 import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
+import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.compo
     PageNotFoundComponent,
     SceneViewComponent,
     ToggleBasemapLayerComponent,
-    BasemapGalleryComponent
+    BasemapGalleryComponent,
+    CustomBasemapStylesComponent
   ],
   imports     : [
     BrowserModule,

@@ -64,4 +64,5 @@ export class BasemapGalleryComponent implements OnInit, OnDestroy {
         if (this.view) {
             this.view.destroy();
         }
-    }}
+    }
+}
