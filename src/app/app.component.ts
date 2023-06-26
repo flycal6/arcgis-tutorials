@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MAP_EMOJI } from '../constants';
+import { MAP_EMOJI } from '@app/constants';
 import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../environments/environment';
+import { ARCGIS_API_KEY } from '@environments/environment';
 
 @Component({
     selector   : 'app-root',

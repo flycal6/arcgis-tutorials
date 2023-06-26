@@ -49,7 +49,7 @@ export class CustomBasemapStylesComponent implements OnInit, OnDestroy {
         });
 
         const map = new Map({
-            // basemap: 'arcgis-topographic', // basemap layer service
+            // basemap: TOPOGRAPHIC_BASEMAP, // basemap layer service
             basemap
         });
 

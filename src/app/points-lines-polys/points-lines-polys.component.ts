@@ -10,6 +10,7 @@ import SimpleLineSymbol from '@arcgis/core/symbols/SimpleLineSymbol';
 import Polygon from '@arcgis/core/geometry/Polygon';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import PopupTemplate from '@arcgis/core/PopupTemplate';
+import { TOPOGRAPHIC_BASEMAP } from '@app/constants';
 
 @Component({
     selector   : 'app-points-lines-polys',
@@ -31,7 +32,7 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: 'arcgis-topographic'
+            basemap: TOPOGRAPHIC_BASEMAP
         });
 
         const view = new MapView({

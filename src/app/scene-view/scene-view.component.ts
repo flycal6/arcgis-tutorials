@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import Map from '@arcgis/core/Map';
 import Search from '@arcgis/core/widgets/Search';
 import SceneView from '@arcgis/core/views/SceneView';
+import { TOPOGRAPHIC_BASEMAP } from '@app/constants';
 
 @Component({
     selector   : 'app-scene-view',
@@ -26,7 +27,7 @@ export class SceneViewComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: 'arcgis-topographic',
+            basemap: TOPOGRAPHIC_BASEMAP,
             // ground: 'world-elevation'
         });
 
