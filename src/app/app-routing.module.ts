@@ -8,18 +8,20 @@ import { SceneViewComponent } from './scene-view/scene-view.component';
 import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basemap-layer.component';
 import {
     BASIC_MAP_TITLE,
-    TOGGLE_BASEMAP_LAYER_TITLE,
-    SCENE_VIEW_TITLE,
-    WEB_MAP_TITLE,
-    SELECT_BASEMAP_LAYER_TITLE,
     CUSTOM_BASEMAP_STYLE_TITLE,
+    HOSTED_FEAT_LAYER_TITLE,
     POINTS_LINES_TITLE,
-    HOSTED_FEAT_LAYER_TITLE
-} from '../constants';
+    SCENE_VIEW_TITLE,
+    SELECT_BASEMAP_LAYER_TITLE,
+    STYLED_FEAT_LAYER_TITLE,
+    TOGGLE_BASEMAP_LAYER_TITLE,
+    WEB_MAP_TITLE
+} from './constants';
 import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
 import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
 import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-polys.component';
 import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-feature-layer.component';
+import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-feature-layer.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -30,6 +32,7 @@ const routes: Routes = [
     {path: 'custom-style', title: CUSTOM_BASEMAP_STYLE_TITLE, component: CustomBasemapStylesComponent},
     {path: 'points-lines', title: POINTS_LINES_TITLE, component: PointsLinesPolysComponent},
     {path: 'hosted-feature', title: HOSTED_FEAT_LAYER_TITLE, component: HostedFeatureLayerComponent},
+    {path: 'styled-feature', title: STYLED_FEAT_LAYER_TITLE, component: StyledFeatureLayerComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];

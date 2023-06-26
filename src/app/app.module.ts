@@ -13,27 +13,29 @@ import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.compo
 import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
 import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-polys.component';
 import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-feature-layer.component';
+import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-feature-layer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BasicMapComponent,
-    WebMapComponent,
-    PageNotFoundComponent,
-    SceneViewComponent,
-    ToggleBasemapLayerComponent,
-    BasemapGalleryComponent,
-    CustomBasemapStylesComponent,
-    PointsLinesPolysComponent,
-    HostedFeatureLayerComponent
-  ],
-  imports     : [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule
-  ],
-  providers   : [],
-  bootstrap   : [AppComponent]
+    declarations: [
+        AppComponent,
+        BasicMapComponent,
+        WebMapComponent,
+        PageNotFoundComponent,
+        SceneViewComponent,
+        ToggleBasemapLayerComponent,
+        BasemapGalleryComponent,
+        CustomBasemapStylesComponent,
+        PointsLinesPolysComponent,
+        HostedFeatureLayerComponent,
+        StyledFeatureLayerComponent
+    ],
+    imports     : [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule
+    ],
+    providers   : [],
+    bootstrap   : [AppComponent]
 })
 export class AppModule {
 }
