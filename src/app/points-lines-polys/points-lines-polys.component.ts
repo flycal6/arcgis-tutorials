@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import GraphicsLayer from '@arcgis/core/layers/GraphicsLayer';
@@ -12,12 +10,11 @@ import SimpleLineSymbol from '@arcgis/core/symbols/SimpleLineSymbol';
 import Polygon from '@arcgis/core/geometry/Polygon';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import PopupTemplate from '@arcgis/core/PopupTemplate';
-import Attribution from '@arcgis/core/widgets/Attribution';
 
 @Component({
-  selector: 'app-points-lines-polys',
-  templateUrl: './points-lines-polys.component.html',
-  styleUrls: ['./points-lines-polys.component.scss']
+    selector   : 'app-points-lines-polys',
+    templateUrl: './points-lines-polys.component.html',
+    styleUrls  : ['./points-lines-polys.component.scss']
 })
 export class PointsLinesPolysComponent implements OnInit, OnDestroy {
 
@@ -25,10 +22,9 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
     public view: any = null;
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
-        })
+        });
     }
 
     initMap(): Promise<any> {
@@ -40,8 +36,8 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
 
         const view = new MapView({
             map,
-            center: [-118.80500,34.02700],
-            zoom: 13,
+            center: [-118.80500, 34.02700],
+            zoom  : 13,
             container
         });
 
@@ -71,7 +67,7 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
         });
 
         const simpleFillSymbol = new SimpleFillSymbol({
-            color: [227, 139, 79, 0.5],
+            color  : [227, 139, 79, 0.5],
             outline: {
                 color: [255, 255, 255],
                 width: 1
@@ -79,18 +75,18 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
         });
 
         const popupTemplate = new PopupTemplate({
-           title: '{Name}',
-           content: '{Description}'
+            title  : '{Name}',
+            content: '{Description}'
         });
 
         const attributes = {
-            Name: 'Graphic',
+            Name       : 'Graphic',
             Description: 'I am a polygon'
         };
 
         const polygonGraphic = new Graphic({
             geometry: polygon,
-            symbol: simpleFillSymbol,
+            symbol  : simpleFillSymbol,
             attributes,
             popupTemplate
         });
@@ -116,7 +112,7 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
 
         const polyLineGraphic = new Graphic({
             geometry: polyLine,
-            symbol: simpleLineSymbol
+            symbol  : simpleLineSymbol
         });
 
         return polyLineGraphic;
@@ -125,12 +121,12 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
     createPointGraphic(): Graphic {
         const point = new Point({
             longitude: -118.80657463861,
-            latitude: 34.0005930608889
+            latitude : 34.0005930608889
         });
 
         const simpleMarkerSymbol = new SimpleMarkerSymbol({
             // type: 'simple-marker',
-            color: [226, 119, 40],
+            color  : [226, 119, 40],
             outline: {
                 color: [255, 255, 255],
                 width: 1
@@ -139,12 +135,15 @@ export class PointsLinesPolysComponent implements OnInit, OnDestroy {
 
         const pointGraphic = new Graphic({
             geometry: point,
-            symbol: simpleMarkerSymbol
+            symbol  : simpleMarkerSymbol
         });
 
         return pointGraphic;
     }
 
     ngOnDestroy(): void {
+        if (this.view) {
+            this.view.destroy();
+        }
     }
 }

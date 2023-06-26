@@ -1,11 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import Map from '@arcgis/core/Map';
-import SceneView from '@arcgis/core/views/SceneView';
 import Search from '@arcgis/core/widgets/Search';
 import WebMap from '@arcgis/core/WebMap';
 import MapView from '@arcgis/core/views/MapView';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 
 @Component({
   selector: 'app-web-map',
@@ -21,7 +17,6 @@ export class WebMapComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         }).catch(err => {

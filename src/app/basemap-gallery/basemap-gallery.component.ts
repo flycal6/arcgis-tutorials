@@ -1,16 +1,13 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
-import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
 import Search from '@arcgis/core/widgets/Search';
 import BasemapGallery from '@arcgis/core/widgets/BasemapGallery';
 
 @Component({
-  selector: 'app-basemap-gallery',
-  templateUrl: './basemap-gallery.component.html',
-  styleUrls: ['./basemap-gallery.component.scss']
+    selector   : 'app-basemap-gallery',
+    templateUrl: './basemap-gallery.component.html',
+    styleUrls  : ['./basemap-gallery.component.scss']
 })
 export class BasemapGalleryComponent implements OnInit, OnDestroy {
 
@@ -21,7 +18,6 @@ export class BasemapGalleryComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
@@ -38,8 +34,8 @@ export class BasemapGalleryComponent implements OnInit, OnDestroy {
         const view = new MapView({
             container,
             map,
-            center: [-118.80543,34.02700], // longitude, latitude
-            zoom: 13
+            center: [-118.80543, 34.02700], // longitude, latitude
+            zoom  : 13
         });
 
         const basemapGallery = new BasemapGallery({
@@ -49,7 +45,7 @@ export class BasemapGalleryComponent implements OnInit, OnDestroy {
                     title: '"World Basemaps for Developers" AND owner:esri'
                 }
             }
-        })
+        });
         view.ui.add(basemapGallery, 'top-right');
 
         const search = new Search({view});

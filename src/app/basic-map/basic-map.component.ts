@@ -1,11 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
 import MapView from '@arcgis/core/views/MapView';
-import WebMap from '@arcgis/core/WebMap';
 import Search from '@arcgis/core/widgets/Search';
 import Map from '@arcgis/core/Map';
-import SceneView from '@arcgis/core/views/SceneView';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 
 @Component({
     selector   : 'app-basic-map',
@@ -21,7 +17,6 @@ export class BasicMapComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
@@ -60,8 +55,8 @@ export class BasicMapComponent implements OnInit, OnDestroy {
         const view = new MapView({
             // container: "viewDiv",
             container,
-            map: map,
-            zoom: 4,
+            map   : map,
+            zoom  : 4,
             center: [15, 65] // longitude, latitude
         });
 

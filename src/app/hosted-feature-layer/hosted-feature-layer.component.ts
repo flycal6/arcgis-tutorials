@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
@@ -30,7 +28,7 @@ export class HostedFeatureLayerComponent implements OnInit, OnDestroy {
 
         // Trailheads feature layer (points)
         const trailheadsLayer = new FeatureLayer({
-            url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0"
+            url: 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0'
         });
         map.add(trailheadsLayer);
 
@@ -51,12 +49,14 @@ export class HostedFeatureLayerComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
     }
 
     ngOnDestroy(): void {
+        if (this.view) {
+            this.view.destroy();
+        }
     }
 }

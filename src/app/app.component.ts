@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MAP_EMOJI } from '../constants';
+import esriConfig from '@arcgis/core/config';
+import { ARCGIS_API_KEY } from '../environments/environment';
 
 @Component({
     selector   : 'app-root',
@@ -9,4 +11,9 @@ import { MAP_EMOJI } from '../constants';
 export class AppComponent {
     title = 'arcgis-tutorials';
     header = 'Making Maps ' + MAP_EMOJI;
+
+    constructor() {
+        esriConfig.apiKey = ARCGIS_API_KEY;
+    }
+
 }

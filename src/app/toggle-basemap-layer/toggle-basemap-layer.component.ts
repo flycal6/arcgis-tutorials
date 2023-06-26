@@ -1,15 +1,13 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import Search from '@arcgis/core/widgets/Search';
 import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
 
 @Component({
-  selector: 'app-toggle-basemap-layer',
-  templateUrl: './toggle-basemap-layer.component.html',
-  styleUrls: ['./toggle-basemap-layer.component.scss']
+    selector   : 'app-toggle-basemap-layer',
+    templateUrl: './toggle-basemap-layer.component.html',
+    styleUrls  : ['./toggle-basemap-layer.component.scss']
 })
 export class ToggleBasemapLayerComponent implements OnInit, OnDestroy {
 
@@ -20,7 +18,6 @@ export class ToggleBasemapLayerComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
@@ -37,8 +34,8 @@ export class ToggleBasemapLayerComponent implements OnInit, OnDestroy {
         const view = new MapView({
             container,
             map,
-            center: [-118.80543,34.02700], // longitude, latitude
-            zoom: 13
+            center: [-118.80543, 34.02700], // longitude, latitude
+            zoom  : 13
         });
 
         const basemapToggle = new BasemapToggle({

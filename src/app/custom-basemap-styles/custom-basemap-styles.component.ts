@@ -1,8 +1,5 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import MapView from '@arcgis/core/views/MapView';
-import BasemapGallery from '@arcgis/core/widgets/BasemapGallery';
 import Search from '@arcgis/core/widgets/Search';
 import Map from '@arcgis/core/Map';
 import VectorTileLayer from '@arcgis/core/layers/VectorTileLayer';
@@ -10,9 +7,9 @@ import TileLayer from '@arcgis/core/layers/TileLayer';
 import Basemap from '@arcgis/core/Basemap';
 
 @Component({
-  selector: 'app-custom-basemap-styles',
-  templateUrl: './custom-basemap-styles.component.html',
-  styleUrls: ['./custom-basemap-styles.component.scss']
+    selector   : 'app-custom-basemap-styles',
+    templateUrl: './custom-basemap-styles.component.html',
+    styleUrls  : ['./custom-basemap-styles.component.scss']
 })
 export class CustomBasemapStylesComponent implements OnInit, OnDestroy {
 
@@ -23,7 +20,6 @@ export class CustomBasemapStylesComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
@@ -34,14 +30,14 @@ export class CustomBasemapStylesComponent implements OnInit, OnDestroy {
 
         const vectorTileLayer = new VectorTileLayer({
             portalItem: {
-                id: "6976148c11bd497d8624206f9ee03e30" // Forest and Parks Canvas
+                id: '6976148c11bd497d8624206f9ee03e30' // Forest and Parks Canvas
             },
-            opacity: 0.75
+            opacity   : 0.75
         });
 
         const imageTileLayer = new TileLayer({
             portalItem: {
-                id: "1b243539f4514b6ba35e7d995890db1d" // World Hillshade,
+                id: '1b243539f4514b6ba35e7d995890db1d' // World Hillshade,
             }
         });
 
@@ -60,8 +56,8 @@ export class CustomBasemapStylesComponent implements OnInit, OnDestroy {
         const view = new MapView({
             container,
             map,
-            center: [-100,40], // longitude, latitude
-            zoom: 3
+            center: [-100, 40], // longitude, latitude
+            zoom  : 3
         });
 
         const search = new Search({view});

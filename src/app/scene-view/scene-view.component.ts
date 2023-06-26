@@ -1,15 +1,12 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import esriConfig from '@arcgis/core/config';
-import { ARCGIS_API_KEY } from '../../environments/environment';
 import Map from '@arcgis/core/Map';
-import MapView from '@arcgis/core/views/MapView';
 import Search from '@arcgis/core/widgets/Search';
 import SceneView from '@arcgis/core/views/SceneView';
 
 @Component({
-  selector: 'app-scene-view',
-  templateUrl: './scene-view.component.html',
-  styleUrls: ['./scene-view.component.scss']
+    selector   : 'app-scene-view',
+    templateUrl: './scene-view.component.html',
+    styleUrls  : ['./scene-view.component.scss']
 })
 export class SceneViewComponent implements OnInit, OnDestroy {
 
@@ -20,7 +17,6 @@ export class SceneViewComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        esriConfig.apiKey = ARCGIS_API_KEY;
         this.initMap().then(() => {
             console.log('the map is ready');
         });
@@ -43,9 +39,9 @@ export class SceneViewComponent implements OnInit, OnDestroy {
                     y: 33.961, // latitude
                     z: 2000 // meters
                 },
-                tilt: 75
+                tilt    : 75
             }
-        })
+        });
 
         const search = new Search({view});
 
