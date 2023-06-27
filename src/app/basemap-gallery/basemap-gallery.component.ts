@@ -3,7 +3,7 @@ import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import Search from '@arcgis/core/widgets/Search';
 import BasemapGallery from '@arcgis/core/widgets/BasemapGallery';
-import { MAHOU_RIVERIA, TOPOGRAPHIC_BASEMAP } from '@app/constants';
+import { MAHOU_RIVERIA, ARCGIS_TOPOGRAPHIC } from '@app/constants';
 
 @Component({
     selector   : 'app-basemap-gallery',
@@ -28,7 +28,7 @@ export class BasemapGalleryComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: TOPOGRAPHIC_BASEMAP,
+            basemap: ARCGIS_TOPOGRAPHIC,
         });
 
 

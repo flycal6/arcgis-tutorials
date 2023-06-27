@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import Map from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
-import { MAHOU_RIVERIA, PARKS_OPEN_SPACES_FEATURE_LAYER, TOPOGRAPHIC_BASEMAP, TRAILHEADS_FEATURE_LAYER, TRAILS_FEATURE_LAYER } from '@app/constants';
+import { MAHOU_RIVERIA, PARKS_OPEN_SPACES_FEATURE_LAYER, ARCGIS_TOPOGRAPHIC, TRAILHEADS_FEATURE_LAYER, TRAILS_FEATURE_LAYER } from '@app/constants';
 
 @Component({
     selector   : 'app-hosted-feature-layer',
@@ -17,7 +17,7 @@ export class HostedFeatureLayerComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: TOPOGRAPHIC_BASEMAP
+            basemap: ARCGIS_TOPOGRAPHIC
         });
 
         const view = new MapView({

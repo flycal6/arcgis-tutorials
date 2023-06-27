@@ -32,7 +32,8 @@ export class WebMapComponent implements OnInit, OnDestroy {
                 // apiKey: this.api_key,
                 // id: 'd582a9e953c44c09bb998c7d9b66f8d4', // colored countries
                // id: 'aa1d3f80270146208328cf66d022e09c', // topographic
-                id: 'e691172598f04ea8881cd2a4adaa45ba' // US accidental deaths
+               //  id: 'e691172598f04ea8881cd2a4adaa45ba' // US accidental deaths
+                id: '8dc5754f24094088b6b6d4d7795d955c' // havasupai
             }
         });
 
@@ -40,8 +41,8 @@ export class WebMapComponent implements OnInit, OnDestroy {
             // container: "viewDiv",
             container,
             map: map,
-            zoom: 4,
-            center: [-95, 35] // longitude, latitude
+            zoom: 14,
+            center: [-112.7007, 36.2333] // longitude, latitude of havasupai res
         });
 
         const search = new Search({view});

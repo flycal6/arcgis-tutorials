@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import MapView from '@arcgis/core/views/MapView';
 import Search from '@arcgis/core/widgets/Search';
 import Map from '@arcgis/core/Map';
-import { TOPOGRAPHIC_BASEMAP } from '@app/constants';
+import { ARCGIS_TOPOGRAPHIC } from '@app/constants';
 
 @Component({
     selector   : 'app-basic-map',
@@ -12,7 +12,7 @@ import { TOPOGRAPHIC_BASEMAP } from '@app/constants';
 export class BasicMapComponent implements OnInit, OnDestroy {
 
     @ViewChild('mapViewNode', {static: true}) viewDiv!: ElementRef;
-    public view: any = null;
+    public view: MapView | null = null;
 
     constructor() {
     }
@@ -27,31 +27,9 @@ export class BasicMapComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: TOPOGRAPHIC_BASEMAP,
+            basemap: ARCGIS_TOPOGRAPHIC,
             // ground: 'world-elevation'
         });
-
-        /*const map = new WebMap({
-            portalItem: {
-                // apiKey: this.api_key,
-                id: 'd582a9e953c44c09bb998c7d9b66f8d4',
-               // id: 'aa1d3f80270146208328cf66d022e09c',
-                // id: 'e691172598f04ea8881cd2a4adaa45ba'
-            }
-        });*/
-
-        /*const view = new SceneView({
-            container,
-            map,
-            camera: {
-                position: {
-                    x: -118.808, // longitude
-                    y: 33.961, // latitude
-                    z: 2000 // meters
-                },
-                tilt: 75
-            }
-        })*/
 
         const view = new MapView({
             // container: "viewDiv",

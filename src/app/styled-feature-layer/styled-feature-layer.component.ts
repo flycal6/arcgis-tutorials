@@ -7,7 +7,7 @@ import TextSymbol from '@arcgis/core/symbols/TextSymbol';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
 import LabelClass from '@arcgis/core/layers/support/LabelClass';
 import Font from '@arcgis/core/symbols/Font';
-import { MAHOU_RIVERIA, NPS_HIKER_PICTOGRAPH, PARKS_OPEN_SPACES_FEATURE_LAYER, TOPOGRAPHIC_BASEMAP, TRAILHEADS_FEATURE_LAYER, TRAILS_FEATURE_LAYER } from '@app/constants';
+import { MAHOU_RIVERIA, NPS_HIKER_PICTOGRAPH, PARKS_OPEN_SPACES_FEATURE_LAYER, ARCGIS_TOPOGRAPHIC, TRAILHEADS_FEATURE_LAYER, TRAILS_FEATURE_LAYER } from '@app/constants';
 import SimpleLineSymbol from '@arcgis/core/symbols/SimpleLineSymbol';
 import VisualVariable from '@arcgis/core/renderers/visualVariables/VisualVariable';
 import SizeVariable from '@arcgis/core/renderers/visualVariables/SizeVariable';
@@ -30,7 +30,7 @@ export class StyledFeatureLayerComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
 
         const map = new Map({
-            basemap: TOPOGRAPHIC_BASEMAP
+            basemap: ARCGIS_TOPOGRAPHIC
         });
 
         const view = new MapView({

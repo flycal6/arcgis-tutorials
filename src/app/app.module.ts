@@ -14,6 +14,8 @@ import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-bas
 import { PointsLinesPolysComponent } from './points-lines-polys/points-lines-polys.component';
 import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-feature-layer.component';
 import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-feature-layer.component';
+import { DisplayPopupComponent } from './display-popup/display-popup.component';
+import { VectorTileLayerComponent } from './vector-tile-layer/vector-tile-layer.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-featu
         CustomBasemapStylesComponent,
         PointsLinesPolysComponent,
         HostedFeatureLayerComponent,
-        StyledFeatureLayerComponent
+        StyledFeatureLayerComponent,
+        DisplayPopupComponent,
+        VectorTileLayerComponent
     ],
     imports     : [
         BrowserModule,
