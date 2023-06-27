@@ -11,6 +11,7 @@ export const HOSTED_FEAT_LAYER_TITLE = 'ArcGIS | Hosted Feature Layer';
 export const STYLED_FEAT_LAYER_TITLE = 'ArcGIS | Styled Feature Layer';
 export const DISPLAY_POPUP_TITLE = 'ArcGIS | Pop Pop!';
 export const VECTOR_TILE_TITLE = 'ArcGIS | Vector Tile Layer';
+export const WEB_SCENE_TITLE = 'ArcGIS | Web Scene';
 
 // basemaps
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';

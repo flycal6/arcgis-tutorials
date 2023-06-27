@@ -17,7 +17,7 @@ import {
     STYLED_FEAT_LAYER_TITLE,
     TOGGLE_BASEMAP_LAYER_TITLE,
     VECTOR_TILE_TITLE,
-    WEB_MAP_TITLE
+    WEB_MAP_TITLE, WEB_SCENE_TITLE
 } from './constants';
 import { BasemapGalleryComponent } from './basemap-gallery/basemap-gallery.component';
 import { CustomBasemapStylesComponent } from './custom-basemap-styles/custom-basemap-styles.component';
@@ -26,6 +26,7 @@ import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-featu
 import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-feature-layer.component';
 import { DisplayPopupComponent } from '@app/display-popup/display-popup.component';
 import { VectorTileLayerComponent } from '@app/vector-tile-layer/vector-tile-layer.component';
+import { WebSceneComponent } from '@app/web-scene/web-scene.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -39,6 +40,7 @@ const routes: Routes = [
     {path: 'styled-feature', title: STYLED_FEAT_LAYER_TITLE, component: StyledFeatureLayerComponent},
     {path: 'display-popup', title: DISPLAY_POPUP_TITLE, component: DisplayPopupComponent},
     {path: 'vector-tile', title: VECTOR_TILE_TITLE, component: VectorTileLayerComponent},
+    {path: 'web-scene', title: WEB_SCENE_TITLE, component: WebSceneComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];

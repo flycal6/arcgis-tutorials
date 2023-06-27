@@ -16,6 +16,7 @@ import { HostedFeatureLayerComponent } from './hosted-feature-layer/hosted-featu
 import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-feature-layer.component';
 import { DisplayPopupComponent } from './display-popup/display-popup.component';
 import { VectorTileLayerComponent } from './vector-tile-layer/vector-tile-layer.component';
+import { WebSceneComponent } from './web-scene/web-scene.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { VectorTileLayerComponent } from './vector-tile-layer/vector-tile-layer.
         HostedFeatureLayerComponent,
         StyledFeatureLayerComponent,
         DisplayPopupComponent,
-        VectorTileLayerComponent
+        VectorTileLayerComponent,
+        WebSceneComponent
     ],
     imports     : [
         BrowserModule,
