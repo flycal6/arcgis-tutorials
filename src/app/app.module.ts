@@ -17,6 +17,7 @@ import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-featu
 import { DisplayPopupComponent } from './display-popup/display-popup.component';
 import { VectorTileLayerComponent } from './vector-tile-layer/vector-tile-layer.component';
 import { WebSceneComponent } from './web-scene/web-scene.component';
+import { SqlFeatureQueryComponent } from './sql-feature-query/sql-feature-query.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { WebSceneComponent } from './web-scene/web-scene.component';
         StyledFeatureLayerComponent,
         DisplayPopupComponent,
         VectorTileLayerComponent,
-        WebSceneComponent
+        WebSceneComponent,
+        SqlFeatureQueryComponent
     ],
     imports     : [
         BrowserModule,

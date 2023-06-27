@@ -12,6 +12,7 @@ export const STYLED_FEAT_LAYER_TITLE = 'ArcGIS | Styled Feature Layer';
 export const DISPLAY_POPUP_TITLE = 'ArcGIS | Pop Pop!';
 export const VECTOR_TILE_TITLE = 'ArcGIS | Vector Tile Layer';
 export const WEB_SCENE_TITLE = 'ArcGIS | Web Scene';
+export const SQL_SELECTOR_TITLE = 'ArcGIS | SQL Selector';
 
 // basemaps
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';
@@ -26,6 +27,7 @@ export const TRAILS_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASV
 export const TRAILS_STYLED_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails_Styled/FeatureServer/0';
 export const PARKS_OPEN_SPACES_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space/FeatureServer/0';
 export const PARKS_OPEN_SPACES_STYLED_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space_Styled/FeatureServer/0';
+export const LA_COUNTY_PARCELS_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/LA_County_Parcels/FeatureServer/0';
 
 // Vector Tile Layers
 export const SANTA_MONICA_MOUNTAINS_PARCELS_VTL = 'https://vectortileservices3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Santa_Monica_Mountains_Parcels_VTL/VectorTileServer/';

@@ -27,6 +27,7 @@ import { StyledFeatureLayerComponent } from './styled-feature-layer/styled-featu
 import { DisplayPopupComponent } from '@app/display-popup/display-popup.component';
 import { VectorTileLayerComponent } from '@app/vector-tile-layer/vector-tile-layer.component';
 import { WebSceneComponent } from '@app/web-scene/web-scene.component';
+import { SqlFeatureQueryComponent } from '@app/sql-feature-query/sql-feature-query.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
     {path: 'display-popup', title: DISPLAY_POPUP_TITLE, component: DisplayPopupComponent},
     {path: 'vector-tile', title: VECTOR_TILE_TITLE, component: VectorTileLayerComponent},
     {path: 'web-scene', title: WEB_SCENE_TITLE, component: WebSceneComponent},
+    {path: 'sql-selector', title: WEB_SCENE_TITLE, component: SqlFeatureQueryComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];
