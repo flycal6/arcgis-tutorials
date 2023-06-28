@@ -13,6 +13,7 @@ export const DISPLAY_POPUP_TITLE = 'ArcGIS | Pop Pop!';
 export const VECTOR_TILE_TITLE = 'ArcGIS | Vector Tile Layer';
 export const WEB_SCENE_TITLE = 'ArcGIS | Web Scene';
 export const SQL_SELECTOR_TITLE = 'ArcGIS | SQL Selector';
+export const SPATIAL_QUERY_TITLE = 'ArcGIS | Spatial Query';
 
 // basemaps
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';

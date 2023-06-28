@@ -13,7 +13,7 @@ import {
     HOSTED_FEAT_LAYER_TITLE,
     POINTS_LINES_TITLE,
     SCENE_VIEW_TITLE,
-    SELECT_BASEMAP_LAYER_TITLE, SQL_SELECTOR_TITLE,
+    SELECT_BASEMAP_LAYER_TITLE, SPATIAL_QUERY_TITLE, SQL_SELECTOR_TITLE,
     STYLED_FEAT_LAYER_TITLE,
     TOGGLE_BASEMAP_LAYER_TITLE,
     VECTOR_TILE_TITLE,
@@ -28,6 +28,7 @@ import { DisplayPopupComponent } from '@app/display-popup/display-popup.componen
 import { VectorTileLayerComponent } from '@app/vector-tile-layer/vector-tile-layer.component';
 import { WebSceneComponent } from '@app/web-scene/web-scene.component';
 import { SqlFeatureQueryComponent } from '@app/sql-feature-query/sql-feature-query.component';
+import { SpatialFeatureQueryComponent } from '@app/spatial-feature-query/spatial-feature-query.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path: 'vector-tile', title: VECTOR_TILE_TITLE, component: VectorTileLayerComponent},
     {path: 'web-scene', title: WEB_SCENE_TITLE, component: WebSceneComponent},
     {path: 'sql-selector', title: SQL_SELECTOR_TITLE, component: SqlFeatureQueryComponent},
+    {path: 'spatial-query', title: SPATIAL_QUERY_TITLE, component: SpatialFeatureQueryComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];

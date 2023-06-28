@@ -14,9 +14,6 @@ export class BasicMapComponent implements OnInit, OnDestroy {
     @ViewChild('mapViewNode', {static: true}) viewDiv!: ElementRef;
     public view: MapView | null = null;
 
-    constructor() {
-    }
-
     ngOnInit(): void {
         this.initMap().then(() => {
             console.log('the map is ready');
