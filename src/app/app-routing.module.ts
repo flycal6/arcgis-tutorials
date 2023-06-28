@@ -13,7 +13,7 @@ import {
     HOSTED_FEAT_LAYER_TITLE,
     POINTS_LINES_TITLE,
     SCENE_VIEW_TITLE,
-    SELECT_BASEMAP_LAYER_TITLE,
+    SELECT_BASEMAP_LAYER_TITLE, SQL_SELECTOR_TITLE,
     STYLED_FEAT_LAYER_TITLE,
     TOGGLE_BASEMAP_LAYER_TITLE,
     VECTOR_TILE_TITLE,
@@ -42,7 +42,7 @@ const routes: Routes = [
     {path: 'display-popup', title: DISPLAY_POPUP_TITLE, component: DisplayPopupComponent},
     {path: 'vector-tile', title: VECTOR_TILE_TITLE, component: VectorTileLayerComponent},
     {path: 'web-scene', title: WEB_SCENE_TITLE, component: WebSceneComponent},
-    {path: 'sql-selector', title: WEB_SCENE_TITLE, component: SqlFeatureQueryComponent},
+    {path: 'sql-selector', title: SQL_SELECTOR_TITLE, component: SqlFeatureQueryComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];

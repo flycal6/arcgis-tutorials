@@ -4,7 +4,6 @@ import Map from '@arcgis/core/Map';
 import { ARCGIS_TOPOGRAPHIC, LA_COUNTY_PARCELS_FEATURE_LAYER } from '@app/constants';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
 import Query from '@arcgis/core/rest/support/Query';
-import Extent from '@arcgis/core/geometry/Extent';
 import FeatureSet from '@arcgis/core/rest/support/FeatureSet';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import SimpleLineSymbol from '@arcgis/core/symbols/SimpleLineSymbol';
@@ -62,16 +61,20 @@ export class SqlFeatureQueryComponent implements OnInit, OnDestroy {
 
         parcelLayer.queryFeatures(parcelQuery).then(res => {
             console.log('feature count: ' + res.features.length);
-            const queryResults = this.displayQueryResults(res);
-            view.closePopup();
-            view.graphics.removeAll();
-            view.graphics.addMany(queryResults);
+            const queryResults: Graphic[] = this.setFeatureGraphics(res);
+            this.displayFeatureGraphics(view, queryResults);
         }).catch(err => {
             console.error(err.error);
         });
     }
 
-    private displayQueryResults(results: FeatureSet): Graphic[] {
+    private displayFeatureGraphics(view: MapView, queryResults: Graphic[]): void {
+        view.closePopup();
+        view.graphics.removeAll();
+        view.graphics.addMany(queryResults);
+    }
+
+    private setFeatureGraphics(results: FeatureSet): Graphic[] {
         const symbol = new SimpleFillSymbol({
             color  : [20, 130, 200, 0.5],
             outline: new SimpleLineSymbol({
@@ -89,7 +92,7 @@ export class SqlFeatureQueryComponent implements OnInit, OnDestroy {
             feature.symbol = symbol;
             feature.popupTemplate = popupTemplate;
             return feature;
-        })
+        });
     }
 
     initMap(): Promise<any> {
