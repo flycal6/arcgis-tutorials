@@ -1,28 +1,41 @@
 <div class="container">
-    <div class="row">
-        <div class="col text-center mt-2">
-            <h1>{{header}}</h1>
-            <hr>
-        </div>
-    </div>
-    <div class="row form-group">
-        <div class="col">
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/basic-map" routerLinkActive="active">Basic Map</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/web-map" routerLinkActive="active">Web Map</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/scene-view" routerLinkActive="active">Scene View</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/toggle-basemap-layer" routerLinkActive="active">Toggle Basemap Layer</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/basemap-gallery" routerLinkActive="active">Selectable Basemap Layer</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/custom-style" routerLinkActive="active">Custom Basemap Styles</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/points-lines" routerLinkActive="active">Points, Lines, Polygons</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/hosted-feature" routerLinkActive="active">Hosted Feature Layer</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/styled-feature" routerLinkActive="active">Styled Feature Layer</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/display-popup" routerLinkActive="active">Popups</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/vector-tile" routerLinkActive="active">Vector Tile Layer</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/web-scene" routerLinkActive="active">Web Scene</a>
-                <a class="btn btn-secondary me-1 mb-1" routerLink="/sql-selector" routerLinkActive="active">SQL Query</a>
-            <hr>
-        </div>
-    </div>
+    <mat-toolbar color="primary" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon> &nbsp; {{header}}
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav #drawer [autoFocus]="false">
+            <mat-list>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class="me-1 mb-1" routerLink="/basic-map" routerLinkActive="active">Basic Map</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/web-map" routerLinkActive="active">Web Map</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/scene-view" routerLinkActive="active">Scene View</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/toggle-basemap-layer" routerLinkActive="active">Toggle Basemap Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/basemap-gallery" routerLinkActive="active">Selectable Basemap Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/custom-style" routerLinkActive="active">Custom Basemap Styles</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/points-lines" routerLinkActive="active">Points, Lines, Polygons</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/hosted-feature" routerLinkActive="active">Hosted Feature Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/styled-feature" routerLinkActive="active">Styled Feature Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/display-popup" routerLinkActive="active">Popups</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/vector-tile" routerLinkActive="active">Vector Tile Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/web-scene" routerLinkActive="active">Web Scene</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class=" me-1 mb-1" routerLink="/sql-selector" routerLinkActive="active">SQL Query</a></mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 
-    <router-outlet></router-outlet>
 </div>

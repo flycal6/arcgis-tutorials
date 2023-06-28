@@ -18,6 +18,12 @@ import { DisplayPopupComponent } from './display-popup/display-popup.component';
 import { VectorTileLayerComponent } from './vector-tile-layer/vector-tile-layer.component';
 import { WebSceneComponent } from './web-scene/web-scene.component';
 import { SqlFeatureQueryComponent } from './sql-feature-query/sql-feature-query.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     declarations: [
@@ -37,10 +43,16 @@ import { SqlFeatureQueryComponent } from './sql-feature-query/sql-feature-query.
         WebSceneComponent,
         SqlFeatureQueryComponent
     ],
-    imports     : [
+    imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
-        RouterModule
+        RouterModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatListModule
     ],
     providers   : [],
     bootstrap   : [AppComponent]

@@ -1,0 +1,12 @@
+$primary-color: #c2185b;
+$accent-color: #b0bec5;
+mat-sidenav {
+  width: 300px;
+  background: $primary-color;
+  color: $accent-color;
+  padding: 16px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}

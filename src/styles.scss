@@ -1,16 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-@import "bootstrap/scss/bootstrap";
-@import "@arcgis/core/assets/esri/themes/light/main.css";
+
+html, body {
+  height: 100%;
+}
 
 body {
-  font-family: "Comic Sans MS", emoji; // am I a joke to you?
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  //font-family: "Comic Sans MS", emoji; // am I a joke to you?
 }
+
 #mapViewNode {
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
 }
+
 .esri-view {
   padding: 0;
   margin: 0;
@@ -19,5 +25,6 @@ body {
 }
 
 #map-parent {
-  height: 80vh;
+  //height: 80vh;
+  height: calc(100vh - 125px);
 }
