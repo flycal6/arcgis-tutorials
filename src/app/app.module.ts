@@ -25,6 +25,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { SpatialFeatureQueryComponent } from './spatial-feature-query/spatial-feature-query.component';
+import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +44,8 @@ import { SpatialFeatureQueryComponent } from './spatial-feature-query/spatial-fe
         VectorTileLayerComponent,
         WebSceneComponent,
         SqlFeatureQueryComponent,
-        SpatialFeatureQueryComponent
+        SpatialFeatureQueryComponent,
+        FilterWithSqlComponent
     ],
     imports: [
         BrowserModule,

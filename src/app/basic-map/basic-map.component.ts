@@ -14,12 +14,6 @@ export class BasicMapComponent implements OnInit, OnDestroy {
     @ViewChild('mapViewNode', {static: true}) viewDiv!: ElementRef;
     public view: MapView | null = null;
 
-    ngOnInit(): void {
-        this.initMap().then(() => {
-            console.log('the map is ready');
-        });
-    }
-
     initMap(): Promise<any> {
         const container = this.viewDiv.nativeElement;
 
@@ -42,6 +36,12 @@ export class BasicMapComponent implements OnInit, OnDestroy {
         this.view = view;
 
         return this.view.when();
+    }
+
+    ngOnInit(): void {
+        this.initMap().then(() => {
+            console.log('the map is ready');
+        });
     }
 
     ngOnDestroy() {

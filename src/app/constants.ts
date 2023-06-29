@@ -14,9 +14,11 @@ export const VECTOR_TILE_TITLE = 'ArcGIS | Vector Tile Layer';
 export const WEB_SCENE_TITLE = 'ArcGIS | Web Scene';
 export const SQL_SELECTOR_TITLE = 'ArcGIS | SQL Selector';
 export const SPATIAL_QUERY_TITLE = 'ArcGIS | Spatial Query';
+export const FILTER_QUERY_TITLE = 'ArcGIS | Filter Query';
 
-// basemaps
+// basemaps - find more at https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';
+export const ARCGIS_COMMUNITY = 'arcgis-community';
 
 // NPS Hiker Pictograph
 export const NPS_HIKER_PICTOGRAPH = 'https://static.arcgis.com/images/Symbols/NPS/npsPictograph_0231b.png';
