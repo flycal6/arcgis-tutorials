@@ -35,7 +35,9 @@
                 <mat-divider></mat-divider>
                 <mat-list-item (click)="drawer.toggle()"><a mat-button class="me-1 mb-1" routerLink="/filter-query" routerLinkActive="active">Filter Query</a></mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item (click)="drawer.toggle()" matTooltip="You'll probably need to set up your own data layer for this one to work"><a mat-button class="me-1 mb-1" routerLink="/editable-layer" routerLinkActive="active">Editable Layer</a></mat-list-item>
+                <mat-list-item (click)="drawer.toggle()" matTooltip="You'll probably need to set up your own data layer for this one to work" matTooltipPosition="right"><a mat-button class="me-1 mb-1" routerLink="/editable-layer" routerLinkActive="active">Editable Layer</a></mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item (click)="drawer.toggle()"><a mat-button class="me-1 mb-1" routerLink="/display-location" routerLinkActive="active">Display User Location</a></mat-list-item>
                 <mat-divider></mat-divider>
             </mat-list>
         </mat-sidenav>

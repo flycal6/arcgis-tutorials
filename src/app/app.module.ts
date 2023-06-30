@@ -28,6 +28,7 @@ import { SpatialFeatureQueryComponent } from './spatial-feature-query/spatial-fe
 import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.component';
 import { EditableLayerComponent } from './editable-layer/editable-layer.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { DisplayLocationComponent } from './display-location/display-location.component';
 
 @NgModule({
     declarations: [
@@ -48,7 +49,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         SqlFeatureQueryComponent,
         SpatialFeatureQueryComponent,
         FilterWithSqlComponent,
-        EditableLayerComponent
+        EditableLayerComponent,
+        DisplayLocationComponent
     ],
     imports: [
         BrowserModule,

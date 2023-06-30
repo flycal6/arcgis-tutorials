@@ -16,11 +16,13 @@ export const SQL_SELECTOR_TITLE = 'ArcGIS | SQL Selector';
 export const SPATIAL_QUERY_TITLE = 'ArcGIS | Spatial Query';
 export const FILTER_QUERY_TITLE = 'ArcGIS | Filter Query';
 export const EDITABLE_LAYER_TITLE = 'ArcGIS | Editable Layer Data';
+export const DISPLAY_LOCATION_TITLE = 'ArcGIS | Big Brother is Watching';
 
 // basemaps - find more at https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';
 export const ARCGIS_COMMUNITY = 'arcgis-community';
 export const ARCGIS_MIDCENTURY = 'arcgis-midcentury';
+export const ARCGIS_NAVIGATION = 'arcgis-navigation';
 
 // NPS Hiker Pictograph
 export const NPS_HIKER_PICTOGRAPH = 'https://static.arcgis.com/images/Symbols/NPS/npsPictograph_0231b.png';
