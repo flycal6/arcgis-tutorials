@@ -29,6 +29,7 @@ import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.compon
 import { EditableLayerComponent } from './editable-layer/editable-layer.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DisplayLocationComponent } from './display-location/display-location.component';
+import { TrackLocationComponent } from './track-location/track-location.component';
 
 @NgModule({
     declarations: [
@@ -50,7 +51,8 @@ import { DisplayLocationComponent } from './display-location/display-location.co
         SpatialFeatureQueryComponent,
         FilterWithSqlComponent,
         EditableLayerComponent,
-        DisplayLocationComponent
+        DisplayLocationComponent,
+        TrackLocationComponent
     ],
     imports: [
         BrowserModule,

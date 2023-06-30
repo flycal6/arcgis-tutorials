@@ -15,7 +15,7 @@ import {
     SCENE_VIEW_TITLE,
     SELECT_BASEMAP_LAYER_TITLE, SPATIAL_QUERY_TITLE, SQL_SELECTOR_TITLE,
     STYLED_FEAT_LAYER_TITLE,
-    TOGGLE_BASEMAP_LAYER_TITLE,
+    TOGGLE_BASEMAP_LAYER_TITLE, TRACK_LOCATION_TITLE,
     VECTOR_TILE_TITLE,
     WEB_MAP_TITLE, WEB_SCENE_TITLE
 } from './constants';
@@ -32,6 +32,7 @@ import { SpatialFeatureQueryComponent } from '@app/spatial-feature-query/spatial
 import { FilterWithSqlComponent } from '@app/filter-with-sql/filter-with-sql.component';
 import { EditableLayerComponent } from '@app/editable-layer/editable-layer.component';
 import { DisplayLocationComponent } from '@app/display-location/display-location.component';
+import { TrackLocationComponent } from '@app/track-location/track-location.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -51,6 +52,7 @@ const routes: Routes = [
     {path: 'filter-query', title: FILTER_QUERY_TITLE, component: FilterWithSqlComponent},
     {path: 'editable-layer', title: EDITABLE_LAYER_TITLE, component: EditableLayerComponent},
     {path: 'display-location', title: DISPLAY_LOCATION_TITLE, component: DisplayLocationComponent},
+    {path: 'track-location', title: TRACK_LOCATION_TITLE, component: TrackLocationComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];

@@ -17,6 +17,7 @@ export const SPATIAL_QUERY_TITLE = 'ArcGIS | Spatial Query';
 export const FILTER_QUERY_TITLE = 'ArcGIS | Filter Query';
 export const EDITABLE_LAYER_TITLE = 'ArcGIS | Editable Layer Data';
 export const DISPLAY_LOCATION_TITLE = 'ArcGIS | Big Brother is Watching';
+export const TRACK_LOCATION_TITLE = 'ArcGIS | Watch Me Watch You';
 
 // basemaps - find more at https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';
@@ -36,10 +37,9 @@ export const PARKS_OPEN_SPACES_FEATURE_LAYER = 'https://services3.arcgis.com/GVg
 export const PARKS_OPEN_SPACES_STYLED_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space_Styled/FeatureServer/0';
 export const LA_COUNTY_PARCELS_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/LA_County_Parcels/FeatureServer/0';
 
-// my created layer `My Points`
+// my created editable layer `My Points`
 export const MY_POINTS_LAYER_URL = 'https://services8.arcgis.com/rBJK2MJVQ38qu0Fh/arcgis/rest/services/my_points/FeatureServer/0';
 export const MY_POINTS_LAYER_ID = '217b3f312718459ab30a4cadc6cb8350';
-
 
 // Vector Tile Layers
 export const SANTA_MONICA_MOUNTAINS_PARCELS_VTL = 'https://vectortileservices3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Santa_Monica_Mountains_Parcels_VTL/VectorTileServer/';
