@@ -26,6 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { SpatialFeatureQueryComponent } from './spatial-feature-query/spatial-feature-query.component';
 import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.component';
+import { EditableLayerComponent } from './editable-layer/editable-layer.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
     declarations: [
@@ -45,7 +47,8 @@ import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.compon
         WebSceneComponent,
         SqlFeatureQueryComponent,
         SpatialFeatureQueryComponent,
-        FilterWithSqlComponent
+        FilterWithSqlComponent,
+        EditableLayerComponent
     ],
     imports: [
         BrowserModule,
@@ -56,7 +59,8 @@ import { FilterWithSqlComponent } from './filter-with-sql/filter-with-sql.compon
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        MatTooltipModule
     ],
     providers   : [],
     bootstrap   : [AppComponent]

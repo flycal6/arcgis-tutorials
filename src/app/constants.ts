@@ -15,10 +15,12 @@ export const WEB_SCENE_TITLE = 'ArcGIS | Web Scene';
 export const SQL_SELECTOR_TITLE = 'ArcGIS | SQL Selector';
 export const SPATIAL_QUERY_TITLE = 'ArcGIS | Spatial Query';
 export const FILTER_QUERY_TITLE = 'ArcGIS | Filter Query';
+export const EDITABLE_LAYER_TITLE = 'ArcGIS | Editable Layer Data';
 
 // basemaps - find more at https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap
 export const ARCGIS_TOPOGRAPHIC = 'arcgis-topographic';
 export const ARCGIS_COMMUNITY = 'arcgis-community';
+export const ARCGIS_MIDCENTURY = 'arcgis-midcentury';
 
 // NPS Hiker Pictograph
 export const NPS_HIKER_PICTOGRAPH = 'https://static.arcgis.com/images/Symbols/NPS/npsPictograph_0231b.png';
@@ -31,6 +33,11 @@ export const TRAILS_STYLED_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbq
 export const PARKS_OPEN_SPACES_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space/FeatureServer/0';
 export const PARKS_OPEN_SPACES_STYLED_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space_Styled/FeatureServer/0';
 export const LA_COUNTY_PARCELS_FEATURE_LAYER = 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/LA_County_Parcels/FeatureServer/0';
+
+// my created layer `My Points`
+export const MY_POINTS_LAYER_URL = 'https://services8.arcgis.com/rBJK2MJVQ38qu0Fh/arcgis/rest/services/my_points/FeatureServer/0';
+export const MY_POINTS_LAYER_ID = '217b3f312718459ab30a4cadc6cb8350';
+
 
 // Vector Tile Layers
 export const SANTA_MONICA_MOUNTAINS_PARCELS_VTL = 'https://vectortileservices3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Santa_Monica_Mountains_Parcels_VTL/VectorTileServer/';

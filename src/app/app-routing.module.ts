@@ -9,7 +9,7 @@ import { ToggleBasemapLayerComponent } from './toggle-basemap-layer/toggle-basem
 import {
     BASIC_MAP_TITLE,
     CUSTOM_BASEMAP_STYLE_TITLE,
-    DISPLAY_POPUP_TITLE, FILTER_QUERY_TITLE,
+    DISPLAY_POPUP_TITLE, EDITABLE_LAYER_TITLE, FILTER_QUERY_TITLE,
     HOSTED_FEAT_LAYER_TITLE,
     POINTS_LINES_TITLE,
     SCENE_VIEW_TITLE,
@@ -30,6 +30,7 @@ import { WebSceneComponent } from '@app/web-scene/web-scene.component';
 import { SqlFeatureQueryComponent } from '@app/sql-feature-query/sql-feature-query.component';
 import { SpatialFeatureQueryComponent } from '@app/spatial-feature-query/spatial-feature-query.component';
 import { FilterWithSqlComponent } from '@app/filter-with-sql/filter-with-sql.component';
+import { EditableLayerComponent } from '@app/editable-layer/editable-layer.component';
 
 const routes: Routes = [
     {path: 'basic-map', title: BASIC_MAP_TITLE, component: BasicMapComponent},
@@ -47,6 +48,7 @@ const routes: Routes = [
     {path: 'sql-selector', title: SQL_SELECTOR_TITLE, component: SqlFeatureQueryComponent},
     {path: 'spatial-query', title: SPATIAL_QUERY_TITLE, component: SpatialFeatureQueryComponent},
     {path: 'filter-query', title: FILTER_QUERY_TITLE, component: FilterWithSqlComponent},
+    {path: 'editable-layer', title: EDITABLE_LAYER_TITLE, component: EditableLayerComponent},
     {path: '', redirectTo: '/basic-map', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];
